@@ -1,0 +1,19 @@
+Em Nest.js, Data Transfer Objects (DTOs) são classes simples que são usadas para transferir dados entre partes diferentes de uma aplicação.
+Elas são especialmente úteis em cenários onde é necessário validar e transferir dados entre o cliente e o servidor, como em requisições HTTP.
+
+As DTOs são geralmente utilizadas nos seguintes casos:
+
+Validação de Dados: As DTOs podem ser usadas para validar os dados recebidos em requisições HTTP antes de serem processados pela aplicação. Isso ajuda a garantir a integridade e a consistência dos dados.
+Desacoplamento: Utilizando DTOs, é possível desacoplar a estrutura dos dados recebidos da estrutura interna da aplicação. Isso permite que as mudanças na estrutura dos dados recebidos não afetem diretamente a lógica de negócio da aplicação.
+Padronização: Utilizar DTOs pode ajudar a padronizar a estrutura dos dados que são transferidos entre as diferentes partes da aplicação, facilitando a compreensão e manutenção do código.
+
+Um exemplo simples de um DTO em Nest.js seria uma classe que representa os dados de um usuário que está sendo enviado em uma requisição POST para criar um novo usuário:
+
+export class CreateUserDto {
+  readonly name: string;
+  readonly email: string;
+  readonly password: string;
+}
+
+Essa classe CreateUserDto pode ser usada para validar os dados recebidos em uma requisição POST e garantir que os campos name, email e password estejam presentes e tenham os tipos corretos.
+Em seguida, esses dados podem ser passados para um serviço ou controlador para serem processados e persistidos no banco de dados.
