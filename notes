@@ -9,4 +9,3 @@
 - Modules é um módulo onde ficarão agrupados os recursos com as mesmas regras de negócio.
 
 - Service é onde é aplicada a lógica da regra de negócio.
-
