@@ -40,8 +40,4 @@ export class UserService {
 
         return null; // Caso contrário, retorna nulo
     }
-
-    async getUserById(id:string){ // Define um método assíncrono chamado 'getUserById' que retorna um usuário com base no ID fornecido
-        return await this.userModel.findById(id); // Retorna um usuário do banco de dados com o ID fornecido
-    }
 }
