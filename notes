@@ -1,33 +1,12 @@
-/*
-Em Nest.js, Data Transfer Objects (DTOs) são classes simples que são usadas para transferir dados entre partes diferentes de uma aplicação.
-Elas são especialmente úteis em cenários onde é necessário validar e transferir dados entre o cliente e o servidor, como em requisições HTTP.
+- Controller é a camada controladora do sistema. Vai receber as requisições e devolver as respostas HTTP.
 
-As DTOs são geralmente utilizadas nos seguintes casos:
+- DTO significa Data Transfer Object. Objeto de transferência de dados.Basicamente é um modelo de como você espera aqueles dados. Se no login vc quer apenas e-mail e senha você cria um DTO com o login e a senha tipados isso ajudará a saber o que você espera no método e o que você devolve TB se assim você quiser.
 
-Validação de Dados: As DTOs podem ser usadas para validar os dados recebidos em requisições HTTP antes de serem processados pela aplicação. Isso ajuda a garantir a integridade e a consistência dos dados.
-Desacoplamento: Utilizando DTOs, é possível desacoplar a estrutura dos dados recebidos da estrutura interna da aplicação. Isso permite que as mudanças na estrutura dos dados recebidos não afetem diretamente a lógica de negócio da aplicação.
-Padronização: Utilizar DTOs pode ajudar a padronizar a estrutura dos dados que são transferidos entre as diferentes partes da aplicação, facilitando a compreensão e manutenção do código.
+- Helper é um facilitador um util, algum trecho de código que é útil para ser utilizado no seu código.
 
-Um exemplo simples de um DTO em Nest.js seria uma classe que representa os dados de um usuário que está sendo enviado em uma requisição POST para criar um novo usuário:
+- Schema é parecido com o Entity/Modelo, se vc olhar o schema vem do MongoDB mas no SQL geralmente é chamado de entidade ou modelo.
 
-export class CreateUserDto {
-  readonly name: string;
-  readonly email: string;
-  readonly password: string;
-}
+- Modules é um módulo onde ficarão agrupados os recursos com as mesmas regras de negócio.
 
-Essa classe CreateUserDto pode ser usada para validar os dados recebidos em uma requisição POST e garantir que os campos name, email e password estejam presentes e tenham os tipos corretos.
-Em seguida, esses dados podem ser passados para um serviço ou controlador para serem processados e persistidos no banco de dados.
-*/
-/*
-auth.controller.ts:
-Este arquivo contém a definição de um controlador em Nest.js relacionado à autenticação. Os controladores em Nest.js são responsáveis por lidar com solicitações HTTP e definir os pontos de extremidade da API. Neste caso, o AuthController provavelmente contém um endpoint para autenticação, como um endpoint de login, onde os usuários podem enviar suas credenciais para autenticação.
+- Service é onde é aplicada a lógica da regra de negócio.
 
-auth.module.ts:
-O arquivo auth.module.ts define um módulo em Nest.js para agrupar funcionalidades relacionadas à autenticação. Os módulos em Nest.js são usados para organizar o código em unidades funcionais e reutilizáveis. No contexto de autenticação, este módulo pode conter definições de controladores, serviços, middleware e outras configurações relacionadas à autenticação.
-
-auth.service.ts:
-Este arquivo contém a definição de um serviço em Nest.js responsável por lidar com a lógica de negócios relacionada à autenticação. Os serviços em Nest.js são usados para encapsular a lógica de negócios em uma aplicação. No caso do AuthService, ele pode conter métodos para autenticar usuários, verificar credenciais, gerar tokens de acesso, entre outras operações relacionadas à autenticação.
-
-Esses arquivos trabalham juntos para implementar a funcionalidade de autenticação em um aplicativo Nest.js, seguindo o padrão de design MVC (Model-View-Controller) para separar as responsabilidades de maneira organizada e manter o código limpo e modular.
-*/
