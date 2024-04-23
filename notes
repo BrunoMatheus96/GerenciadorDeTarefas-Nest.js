@@ -1,6 +1,6 @@
 - Controller é a camada controladora do sistema. Vai receber as requisições e devolver as respostas HTTP.
 
-- DTO significa Data Transfer Object. Objeto de transferência de dados.Basicamente é um modelo de como você espera aqueles dados. Se no login vc quer apenas e-mail e senha você cria um DTO com o login e a senha tipados isso ajudará a saber o que você espera no método e o que você devolve TB se assim você quiser.
+- DTO significa Data Transfer Object. Objeto de transferência de dados.Basicamente define a tipagem do payload da API e as características das propriedades.
 
 - Helper é um facilitador um util, algum trecho de código que é útil para ser utilizado no seu código.
 
